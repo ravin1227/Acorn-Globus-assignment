@@ -71,7 +71,7 @@ const SideMenu = () => {
 
   return (
     // ${open ? "shadow-[3px_-25px_50px_6px_#ccc] z-10": "shadow-[3px_-25px_25px_6px_#ccc] z-1"}
-    <div className={`p-5 pt-8 h-screen  ${open ? "w-72": "w-20"}  
+    <div className={`p-5 pt-8   ${open ? "w-72": "w-20"}  
         relative duration-300 ${open ? "shadow-[3px_-25px_50px_6px_#ccc] z-10": "shadow-[3px_-25px_25px_6px_#ccc] z-1"}`}
     >
          <BsArrowLeftShort 
@@ -81,7 +81,7 @@ const SideMenu = () => {
             onClick={()=> setOpen(!open)}
         />
         <div className='inline-flex  p-1 items-center '>
-            <img src={logo} className={`w-[25px] h-[25px] object-cover mr-1    
+            <img src={logo} alt='' className={`w-[25px] h-[25px] object-cover mr-1    
                duration-500 ${!open && "rotate-[360deg]"} `}
 
             />
@@ -94,7 +94,7 @@ const SideMenu = () => {
                     <>
                         
                         <li key={index} className={` ${menu.active ? "text-black font-semibold" : "text-gray-500 font-medium" } text-sm flex 
-                            items-center gap-x-4 cursor-pointer p-2 hover:bg-[#FAF9F6] rounded-md mt-2 `}
+                            items-center gap-x-4 cursor-pointer p-2 hover:bg-[#FAF9F6] rounded-md mt-2 ${menu.active ? "bg-[#FAF9F6]":"bg-[#FFF]" } `}
                         >   
                             <span className={`text-xl block float-left  ${menu.active ? "text-orange-400":"text-gray-500" }`}>{menu.icons}</span>
                             <span className={` flex-1 ${!open && "scale-0"}  duration-300 text-transform: uppercase `}>{menu.title} <span></span></span>
