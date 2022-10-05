@@ -12,3 +12,4 @@ Designed the basic structure of project.
 Designed the side menu.
 
 # Day 2
+Added Footer and main content area.
