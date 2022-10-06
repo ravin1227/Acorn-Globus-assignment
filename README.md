@@ -13,3 +13,8 @@ Designed the side menu.
 
 # Day 2
 Added Footer and main content area.
+
+
+# Day 3
+No update due to
+Durga Puja celebration

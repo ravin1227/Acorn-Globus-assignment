@@ -8,6 +8,14 @@ import {IoMdEye} from "react-icons/io";
 const Questions = () => {
     const [ques, setQues] = useState([])
 
+// https://api.stackexchange.com/2.3/questions?order=desc&sort=hot&site=stackoverflow
+{/* create function for both api call 
+    call them in useEffect
+    
+    render them in section
+
+*/}
+
   useEffect (()=>{
     axios.get('https://api.stackexchange.com/2.3/questions?order=desc&sort=activity&site=stackoverflow')
     .then((result)=> {setQues(result.data.items)})
@@ -43,7 +51,7 @@ const Questions = () => {
             {ques.slice(0,10).map((item, index)=>(
                 <div key={index} className='flex justify-between items-center'>
                     <div className='flex flex-col'>
-                        <h1 className='text-sm text-blue-500 font-semibold mt-3 cursor-pointer'>{item.title}</h1>
+                        <h1 className='text-sm text-blue-500 font-semibold mt-3 cursor-pointer'><a href={item.link}>{item.title}</a></h1>
                         <ul className='flex gap-2 py-3'>
                             {item.tags.map((tags, index)=>(
                                 <>
@@ -53,20 +61,20 @@ const Questions = () => {
                         </ul>
                         <p className='text-[10px] text-gray-400'>min ago <span className='text-gray-800 text-[11px]'>{item.owner.display_name}</span></p>
                     </div>
-                    <div className=' flex gap-4 ml-2 text-[11px]'>
-                        <div className='flex flex-col items-center text-gray-500 gap-1'>
+                    <div className=' flex gap-4 ml-2 text-[11px] '>
+                        <div className='flex flex-col items-center text-gray-500 gap-1 hover:shadow p-2 hover:shadow-green-400 cursor-pointer'>
                             <span>{item.score}</span>
-                            <h1>votes</h1>
+                            <h1><a href={item.link}>vote</a></h1>
                             <FaRegThumbsUp />
                         </div>
-                        <div className=' flex flex-col items-center text-gray-500 gap-1'>
+                        <div className=' flex flex-col items-center text-gray-500 gap-1 hover:shadow p-2 hover:shadow-green-400 cursor-pointer'>
                             <span>{item.answer_count}</span>
-                            <h1>answer</h1>
+                            <h1><a href={item.link}>answer</a></h1>
                             <MdOutlineModeComment />
                         </div>
-                        <div className=' flex flex-col items-center text-gray-500 gap-1'>
+                        <div className=' flex flex-col items-center text-gray-500 gap-1 hover:shadow p-2 hover:shadow-green-400 cursor-pointer'>
                             <span>{item.view_count}</span>
-                            <h1>views</h1>
+                            <h1><a href={item.link}>views</a></h1>
                             <IoMdEye />
                         </div>
                     </div>
