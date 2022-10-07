@@ -134,7 +134,7 @@ const Footer = () => {
                                     {cat.submenu && (
                                         <ul className='mt-2 '>
                                             {cat.subItems.map((subItems, index)=> (
-                                                <li key={index} className='text-[12px] text-gray-400'>
+                                                <li key={index} className='text-[12px] text-gray-400 cursor-pointer mt-1'>
                                                     {subItems.title}
                                                 </li>
                                             ))}
@@ -145,7 +145,7 @@ const Footer = () => {
                                     {cat.submenu2 && (
                                             <ul className='mt-2'>
                                                 {cat.subItems2.map((subItems, index)=> (
-                                                    <li key={index} className='text-[12px] text-gray-400 '>
+                                                    <li key={index} className='text-[12px] text-gray-400 cursor-pointer mt-1 '>
                                                         {subItems.title}
                                                     </li>
                                                 ))}
