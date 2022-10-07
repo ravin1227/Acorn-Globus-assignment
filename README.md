@@ -18,3 +18,7 @@ Added Footer and main content area.
 # Day 3
 No update due to
 Durga Puja celebration
+
+# Day 4
+Added hot question section
+made few changes in question section
