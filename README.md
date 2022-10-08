@@ -22,3 +22,8 @@ Durga Puja celebration
 # Day 4
 Added hot question section
 made few changes in question section
+
+# Day 5
+Added job section and footer banner
+And few changes in design
+Only search bar left
