@@ -107,10 +107,10 @@ const Footer = () => {
         <div className='flex justify-between px-24 text-gray-500 p-3 items-center '>
             {/**Menu */}
             <div className='bg-[#FFFFFF]' >
-                <ul className='flex gap-4 text-sm hover:cursor-pointer'>
+                <ul className='flex gap-4 text-sm cursor-pointer '>
                     {Menu.map((menu, index)=>(
                         <>
-                            <li key={index}>{menu.title}</li>
+                            <li className='hover:text-gray-800' key={index}>{menu.title}</li>
                             
                         </>
                     ))}
@@ -118,9 +118,9 @@ const Footer = () => {
             </div>
             {/** social icons */}
             <div className='flex gap-3 '>
-                <FaTwitter className=' '/>
-                <FaFacebookF className=' '/>
-                <FaDribbble className=' '/>        
+                <FaTwitter className=' cursor-pointer hover:text-gray-700'/>
+                <FaFacebookF className=' cursor-pointer hover:text-gray-700'/>
+                <FaDribbble className='cursor-pointer hover:text-gray-700 '/>        
             </div>
         </div>
         <div className='px-24  text-sm py-3 text-gray-500 items-center'>
@@ -128,13 +128,13 @@ const Footer = () => {
                 {Category.map((cat, index)=>(
                     <>
                         <li key={index} >
-                            <span className='text-transform: uppercase text-gray-500 '>{cat.item}</span>
+                            <span className='text-transform: uppercase text-gray-500'>{cat.item}</span>
                             <div className='flex gap-6'>
                                 <div>
                                     {cat.submenu && (
                                         <ul className='mt-2 '>
                                             {cat.subItems.map((subItems, index)=> (
-                                                <li key={index} className='text-[12px] text-gray-400 cursor-pointer mt-1'>
+                                                <li key={index} className='text-[12px] text-gray-400 hover:text-gray-600 cursor-pointer mt-1'>
                                                     {subItems.title}
                                                 </li>
                                             ))}
@@ -145,7 +145,7 @@ const Footer = () => {
                                     {cat.submenu2 && (
                                             <ul className='mt-2'>
                                                 {cat.subItems2.map((subItems, index)=> (
-                                                    <li key={index} className='text-[12px] text-gray-400 cursor-pointer mt-1 '>
+                                                    <li key={index} className='text-[12px] text-gray-400 hover:text-gray-600 cursor-pointer mt-1 '>
                                                         {subItems.title}
                                                     </li>
                                                 ))}

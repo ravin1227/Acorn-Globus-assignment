@@ -27,3 +27,6 @@ made few changes in question section
 Added job section and footer banner
 And few changes in design
 Only search bar left
+
+# Day 6
+Implemented the search bar and made few changes in overall design

@@ -10,10 +10,10 @@ const MainContent = () => {
         <TopBar />
         <div className='flex justify-between mt-4 sm:flex-col md:flex-row '>
             <div className='items-center w-full  divide-y'>
-              {/* <Questions /> */}
+              <Questions />
               <Footerbanner />
             </div>
-            {/* <Jobs /> */}
+            <Jobs />
         </div>
     </div>
   )
